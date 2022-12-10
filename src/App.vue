@@ -1,30 +1,42 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <header>
+    <router-link to="/">
+      <h1><span></span>Movies</h1>
+    </router-link>
+    
+  </header>
+  <main>
+    <router-view/>
+  </main>
+  <router-link to="/home">Home</router-link>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+body {
+  background-color: #35495E;
+}
+a {
+  text-decoration: none;
+}
+header{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background-color: #2C3D4E;
+  box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  h1{
+    color: antiquewhite;
+    font-size: 30px;
   }
 }
 </style>
